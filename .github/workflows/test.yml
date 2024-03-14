@@ -8,7 +8,7 @@ on:
 
 jobs:
   dump_contexts_to_log:
-    if: ${{(github.event.inputs.workflow_dispatch == true) }}
+    #if: ${{(github.event.inputs.workflow_dispatch == true) }}
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
