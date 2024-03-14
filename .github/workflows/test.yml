@@ -14,7 +14,7 @@ on:
 
 jobs:
   dump_contexts_to_log:
-    if: ${{(github.event.inputs.manual_run)}}
+    if: ${{(github.event.workflow_run.conclusion == 'success') || (github.event.inputs.manual_run)}}
     runs-on: ubuntu-latest
     steps:
       - name: Dump GitHub context
