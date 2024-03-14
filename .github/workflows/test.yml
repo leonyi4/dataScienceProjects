@@ -5,6 +5,12 @@ on:
     types:
       - completed
   workflow_dispatch: # manual run
+    inputs:
+      manual_run:
+        description: "run manually"
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   dump_contexts_to_log:
